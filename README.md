@@ -1,12 +1,28 @@
 # fstapiauth-ln
 
-## Backend Requirements
+## Read this first
 
-* [Docker](https://www.docker.com/).
-* [Docker Compose](https://docs.docker.com/compose/install/).
-* [Poetry](https://python-poetry.org/) for Python package and environment management.
+### Mandatory
 
-#### Poetry Installation instructions
+Create an `.env` file at the root of your project, and fill in the following information to be able to start this stack.
+
+```bash
+TRAEFIK_PUBLIC_NETWORK=traefik-public
+DOMAIN=fstapiauth-ln.com
+TRAEFIK_PUBLIC_TAG=fstapiauth-ln.com
+TRAEFIK_TAG=fstapiauth-ln.com
+STACK_NAME=fstapiauth-ln-com
+TAG=dev
+DOCKER_IMAGE_PREFIX=fstapiauth-ln.com
+DOCKER_IMAGE_BACKEND=${DOCKER_IMAGE_PREFIX}/backend
+DOCKER_IMAGE_CELERYWORKER=${DOCKER_IMAGE_PREFIX}/celeryworker
+DOCKER_IMAGE_CELERYWORKER=${DOCKER_IMAGE_PREFIX}/frontend
+SMTP_HOST=
+```
+
+### Further reading
+
+#### Poetry Installation
 
 Refer to the Poetry URL above for the recommended Poetry installation instructions on OSX and Windows.
 
@@ -23,6 +39,16 @@ pip3 install --upgrade certifi
 ```
 
 Once you've done that, the Poetry installation procedure should go through easy-peasy.
+
+### Done?
+
+Now you many continue.
+
+## Backend Requirements
+
+* [Docker](https://www.docker.com/).
+* [Docker Compose](https://docs.docker.com/compose/install/).
+* [Poetry](https://python-poetry.org/) for Python package and environment management.
 
 ## Frontend Requirements
 

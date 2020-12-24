@@ -3,6 +3,8 @@ services:
 
   proxy:
     image: traefik:v2.2
+    env_file:
+      - .env
     networks:
       - ${TRAEFIK_PUBLIC_NETWORK?Variable not set}
       - default
