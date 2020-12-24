@@ -6,6 +6,24 @@
 * [Docker Compose](https://docs.docker.com/compose/install/).
 * [Poetry](https://python-poetry.org/) for Python package and environment management.
 
+#### Poetry Installation instructions
+
+Refer to the Poetry URL above for the recommended Poetry installation instructions on OSX and Windows.
+
+If you run into the following error, refer to the below instructions to resolve it (tested on OSX).
+```bash
+urllib.error.URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1051)>
+```
+
+On your root installation of Python, install/upgrade the `cerfifi` package, which are Mozilla curated Root Certificates 
+for validating the trustworthiness of SSL certificates on servers.
+
+```bash
+pip3 install --upgrade certifi
+```
+
+Once you've done that, the Poetry installation procedure should go through easy-peasy.
+
 ## Frontend Requirements
 
 * Node.js (with `npm`).
